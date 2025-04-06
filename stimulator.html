@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Disk Scheduling Simulator</title>
+  <link rel="stylesheet" href="stimulator.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Disk Scheduling Simulator</h1>
+
+    <label for="requestSequence">Request Sequence (comma-separated):</label>
+    <input type="text" id="requestSequence" placeholder="e.g. 95,180,34,119">
+
+    <label for="startHead">Starting Head Position:</label>
+    <input type="number" id="startHead" placeholder="e.g. 50">
+
+    <label for="algorithm">Select Algorithm:</label>
+    <select id="algorithm">
+      <option value="FCFS">FCFS</option>
+      <option value="SSTF">SSTF</option>
+      <option value="SCAN">SCAN</option>
+      <option value="CSCAN">C-SCAN</option>
+      <option value="LOOK">LOOK</option>
+      <option value="CLOOK">C-LOOK</option>
+    </select>
+
+    <button id="simulateBtn">Simulate</button>
+
+    <h2>Simulation Result</h2>
+    <div id="output"></div>
+    <canvas id="chartCanvas" width="800" height="400"></canvas>
+  </div>
+
+  <script src="stimulator.js"></script>
+</body>
+</html>
